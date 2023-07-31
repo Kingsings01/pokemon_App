@@ -1,0 +1,22 @@
+.pokemon-list {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .pokemon-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .pokemon-list li {
+    cursor: pointer;
+    padding: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 4px;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
