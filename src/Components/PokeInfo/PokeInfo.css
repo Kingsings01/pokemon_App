@@ -1,9 +1,9 @@
 .pokemon-detail {
     max-width: 600px;
     margin: 0 auto;
-  }
-  
-  .pokemon-detail h2 {
+}
+
+.pokemon-detail h2 {
     text-transform: capitalize;
     margin-bottom: 8px;
-  }
+}

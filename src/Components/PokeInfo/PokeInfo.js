@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./PokeInfo.css";
 
-const PokemonDetail = ({ selectedPokemon }) => {
+const PokeDetail = ({ selectedPokemon }) => {
   // State to store the Pokemon's details
-  const [pokemonData, setPokemonData] = useState(null);
+  const [pokeData, setPokeData] = useState(null);
 
   // Function to fetch the selected Pokemon's data from the API
-  const fetchPokemonData = async () => {
+  const fetchPokeData = async () => {
     try {
       const response = await axios.get(selectedPokemon.url);
-      setPokemonData(response.data);
+      setPokeData(response.data);
     } catch (error) {
       console.error("Error fetching Pokemon data:", error);
     }
@@ -18,23 +18,23 @@ const PokemonDetail = ({ selectedPokemon }) => {
 
   useEffect(() => {
     if (selectedPokemon) {
-      fetchPokemonData();
+      fetchPokeData();
     }
   }, [selectedPokemon]);
 
   // Render the Pokemon details
   return (
     <div className="pokemon-detail">
-      {pokemonData ? (
+      {pokeData ? (
         <div>
-          <h2>{pokemonData.name}</h2>
+          <h2>{pokeData.name}</h2>
           {/* Display other details of the Pokemon */}
         </div>
       ) : (
-        <p>Loading...</p>
+        <p>Loading Page...</p>
       )}
     </div>
   );
 };
 
-export default PokemonDetail;
+export default PokeDetail;
